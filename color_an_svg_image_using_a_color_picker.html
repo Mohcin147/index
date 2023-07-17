@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color an SVG image using a color picker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-size: 14px;
+      line-height: 1.5;
+	  font-family: Tahoma, sans-serif;
+	  -webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -khtml-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+    }
+
+	.nav {
+	  width: 100%;
+	  padding-top: 20px;
+	  padding-bottom: 15px;
+	  position: fixed;
+	  text-align: center;
+	  cursor: pointer;
+	  background-color: #ff8000;
+	  font-weight: bold;
+	  font-size: 20px;
+	  color: #fff;
+	  z-index: 9999;
+	  top: 0px;
+	  left: 0px;
+	}
+	
+	.aboutus {
+	  display: flex;
+	  text-align: center;
+	  justify-content: center;
+	  align-items: center;
+	  background-color: #404040;
+	  color: #ffffff;
+    }
+	
+	.download {
+	  text-align: center;
+	  width: 100%;
+	  padding: 10px;
+	  margin-bottom: 20px;
+	  background-color: #404040;
+	  color: #ffffff;
+	  transition: background-color 0.3s ease;
+	  cursor: pointer;
+	}
+	
+	.download:hover {
+	  background-color: #c0c0c0;
+	  color: #404040;
+	}
+	
+	.color {
+      fill: #404040;
+      cursor: pointer;
+    }
+	
+	.container {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav" onclick="window.location.href='index.html'">
+    <div>MOHCIN147
+	  <p style="font-size: 14px;">DESIGNER & DEVELOPER ON GITHUB</p>
+	</div>
+  </div>
+  
+  <div class="aboutus" style="padding: 20px; margin-top: 110px;">
+    <div>Coloring SVG image: This project allows you to color an SVG image using a color picker.<br>This script allows users to select a color from the color picker and apply it to specific elements on the webpage.</div>
+  </div>
+  <div class="container"><div class="download" onclick="window.location.href='code_color_an_svg_image_using_a_color_picker.zip'">Download</div></div>
+  <div class="container">
+	<svg class="color" width="100" height="100">
+      <circle cx="50" cy="50" r="40"></circle>
+	</svg>
+
+	<svg class="color" width="100" height="100">
+      <circle cx="50" cy="50" r="40"></circle>
+	</svg>
+
+	<svg class="color" width="100" height="100">
+      <circle cx="50" cy="50" r="40"></circle>
+	</svg>
+  </div>
+  <div class="container">
+    <input type="color" id="colorPicker" value="#000000">
+  </div>
+</body>
+  <script>
+	document.addEventListener('contextmenu', function(e) {
+	  e.preventDefault();
+	});
+  </script>
+  <script>
+    const colorPicker = document.getElementById('colorPicker');
+    const colors = document.querySelectorAll('.color');
+    
+    colors.forEach(color => {
+      color.addEventListener('click', () => {
+        color.style.fill = colorPicker.value;
+      });
+    });
+  </script>
+</html>

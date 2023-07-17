@@ -3,44 +3,91 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Set a default font size and line height */
     body {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.5;
 	  font-family: Tahoma, sans-serif;
+	  -webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -khtml-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
     }
 
-    /* Create a responsive layout using CSS grid */
+	.nav {
+	  width: 100%;
+	  padding-top: 20px;
+	  padding-bottom: 15px;
+	  position: fixed;
+	  text-align: center;
+	  cursor: pointer;
+	  background-color: #ff8000;
+	  font-weight: bold;
+	  font-size: 20px;
+	  color: #fff;
+	  z-index: 9999;
+	  top: 0px;
+	  left: 0px;
+	}
+	
+	.aboutus {
+	  display: flex;
+	  text-align: center;
+	  justify-content: center;
+	  align-items: center;
+	  background-color: #404040;
+	  color: #ffffff;
+    }
+	
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-
+	
     .item {
       padding: 20px;
       background-color: #f2f2f2;
-      border: 0px solid #ccc;
+	  color: #404040;
+	  font-weight: bold;
 	  text-align: center;
+	  transition: background-color 0.3s ease;
+	  cursor: pointer;
     }
+	
+	.item:hover {
+	  background-color: #c0c0c0;
+	}	
+	
+	.paragraph {
+	  font-weight: normal;
+	}
   </style>
+
 </head>
 <body>
-  <div class="container">
-    <div class="item" style="font-family: Tahoma; background-color: #ffffff; font-weight: bold; color: #404040; font-size: 20px;">MOHCIN147<p style="font-size: 14px;">MOHCIN147.GITHUB.IO/INDEX</p></div>
+  <div class="nav" onclick="window.location.href='index.html'">
+    <div>MOHCIN147
+	  <p style="font-size: 14px;">DESIGNER & DEVELOPER ON GITHUB</p>
+	</div>
+  </div>
+  
+  <div class="aboutus" style="padding: 20px; margin-top: 110px;">
+    <div>A website that discusses the creation of e-learning applications and has a solid background in developing and designing educational software and games on Github. I hope you can find what you are looking for among these open source projects.</div>
   </div>
   
   <div class="container">
-    <div class="item" style="background-color: #404040; font-weight: bold; color: #ffffff;">A website that discusses the creation of e-learning applications and has a solid background in developing and designing educational software and games on Github. I hope you can find what you are looking for among these open source projects.</div>
-  </div>
-  
-  <div class="container">
-    <div class="item">Content 5</div>
-    <div class="item">Content 6</div>
-  </div>
-  
-  <div class="container">
-    <div class="item">Content 5</div>
-    <div class="item">Content 6</div>
+    <div class="item" onclick="window.location.href='color_an_svg_image_using_a_color_picker.html'">Coloring SVG image:
+	  <p class="paragraph">This project allows you to color an SVG image using a color picker.</p>
+	</div>
+    <div class="item" onclick="window.location.href='color_an_svg_image_using_a_color_button.html'">Coloring SVG image:
+	  <p class="paragraph">This project allows you to color an SVG image using a color button.</p>
+	</div>
   </div>
 </body>
+  <script>
+	document.addEventListener('contextmenu', function(e) {
+	  e.preventDefault();
+	});
+  </script>
 </html>
