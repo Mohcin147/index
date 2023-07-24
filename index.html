@@ -3,9 +3,10 @@
 <head>
   <title>Mohcin147</title>
   <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
   <meta name="google-site-verification" content="Zfcj56GqyW1ct5AltHgZbxtFyZsrJkVhPVkD32WmZZg" />
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-  <meta name="description" content="A website that discusses the creation of e-learning applications and has a solid background in developing and designing educational software and games on GitHub. I hope you can find what you are looking for among these open source projects.">
+  <meta name="description" content="A website that discusses the creation of e-learning applications and has a solid background in developing and designing educational website and software and games on GitHub. I hope you can find what you are looking for among these open source projects.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -78,7 +79,30 @@
   </div>
   
   <div class="aboutus" style="padding: 20px; margin-top: 110px;">
-    <div>A website that discusses the creation of e-learning applications and has a solid background in developing and designing educational software and games on GitHub. I hope you can find what you are looking for among these open source projects.</div>
+    <div>A website that discusses the creation of e-learning applications and has a solid background in developing and designing educational website and software and games on GitHub. I hope you can find what you are looking for among these open source projects.</div>
+  </div>
+  
+  <div class="aboutus" style="padding: 10px;">
+	<div style="background-color: #404040; cursor: pointer;" onclick="toggleContact();">Contact: mnai2176@gmail.com</div>
+  </div>
+  
+  <div class="aboutus" style="padding: 5px;">
+	<form  id="contact" action="mailto:mnai2176@gmail.com" style="display: none;" method="post" enctype="text/plain">
+	  <label for="name">Name:</label>
+	  <input type="text" id="name" name="name" required><br><br>
+  
+	  <label for="email">Email:</label>
+	  <input type="email" id="email" name="email" required><br><br>
+  
+	  <label for="message">Message:</label><br>
+	  <textarea id="message" name="message" rows="5" cols="30" required>mnai2176@gmail.com</textarea><br><br>
+  
+	  <input type="submit" value="Submit">
+	</form>
+  </div>
+  
+  <div class="aboutus" style="padding: 10px; justify-content: right;">
+	<div style="background-color: #ff8000; cursor: pointer; padding: 5px;" onclick="window.location.href='ar'">اللغة العربية</div>
   </div>
   
   <div class="container">
@@ -108,5 +132,16 @@
 	document.addEventListener('contextmenu', function(e) {
 	  e.preventDefault();
 	});
+  </script>
+  <script>
+  function toggleContact() {
+      var contact = document.getElementById("contact");
+
+      if (contact.style.display === "none") {
+		contact.style.display = "block";
+      } else if (contact.style.display === "block") {
+        contact.style.display = "none";
+      }
+  }
   </script>
 </html>
